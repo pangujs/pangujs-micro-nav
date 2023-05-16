@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微前端Demo</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .top-nav {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        background-color: rgba(255, 255, 255, 0.58);
+        backdrop-filter: blur(8px);
+        transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16); */
+      }
+      .top-nav-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .top-nav-header {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+      }
+      .top-nav-header-main {
+        display: flex;
+        height: 100%;
+      }
+      .top-nav-header-main-left {
+        display: flex;
+        align-items: center;
+      }
+      .top-nav-header-main-left .menu-btn {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: #ff6a00;
+        color: #fff;
+      }
+      .top-nav-header-main-left .menu-icon-btn {
+        display: inline-block;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+        vertical-align: middle;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: all 0.3s ease-out 0s;
+        line-height: inherit;
+      }
+      .top-nav-header-main-left .logo {
+        padding: 0 12px;
+        color: #ff6a00;
+      }
+      .top-nav-header-main-menu {
+        flex: 1 1 0%;
+        display: flex;
+      }
+      .top-nav-header-main-menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+      .top-nav-header-main-menu li {
+        padding: 0 10px;
+      }
+      .top-nav-header-main-right {
+        min-width: 100px;
+        height: 100%;
+      }
+    </style>
+    <script src="//cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="top-nav top-nav-fixed">
+      <div class="top-nav-header">
+        <div class="top-nav-header-main">
+          <div class="top-nav-header-main-left">
+            <button class="menu-btn menu-icon-btn"></button>
+            <a class="logo">Logo</a>
+          </div>
+          <div class="top-nav-header-main-menu">
+            <ul>
+              <li>
+                <a href="/home">Home</a>
+              </li>
+              <li>
+                <a href="/app1">App1</a>
+              </li>
+            </ul>
+          </div>
+          <div class="top-nav-header-main-right">Right Content</div>
+        </div>
+      </div>
+    </header>
+    <script src="//localhost:7001/entry.js" entry></script>
+  </body>
+</html>

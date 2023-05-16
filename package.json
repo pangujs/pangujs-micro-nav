@@ -1,0 +1,25 @@
+{
+  "name": "pangujs-micro-nav",
+  "version": "1.0.0",
+  "description": "pangujs-micro-base 的子应用",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env PORT=7001 http-server ./src --cors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pangujs/pangujs-micro-nav.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pangujs/pangujs-micro-nav/issues"
+  },
+  "homepage": "https://github.com/pangujs/pangujs-micro-nav#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "http-server": "^14.1.1"
+  }
+}
